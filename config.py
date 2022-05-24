@@ -44,10 +44,10 @@ class Config:
     LOG_GROUP=os.environ.get("LOG_GROUP", "")
 
     #Stream 
-    STREAM_URL=os.environ.get("STARTUP_STREAM", "https://www.youtube.com/watch?v=zcrUCvBD16k")
+    STREAM_URL=os.environ.get("STARTUP_STREAM", None)
    
     #Database
-    DATABASE_URI=os.environ.get("DATABASE_URI", None)
+    DATABASE_URI=os.environ.get("DATABASE_URI", " mongodb+srv://<VCPlayerBot>:<VCPlayerBot>@cluster0.giisykx.mongodb.net/?retryWrites=true&w=majority")
     DATABASE_NAME=os.environ.get("DATABASE_NAME", "VCPlayerBot")
 
 
@@ -58,7 +58,7 @@ class Config:
 
     #Optional Configuration
     SHUFFLE=is_enabled(os.environ.get("SHUFFLE", 'True'))
-    ADMIN_ONLY=is_enabled(os.environ.get("ADMIN_ONLY", "False"))
+    ADMIN_ONLY=is_enabled(os.environ.get("ADMIN_ONLY", "True"))
     REPLY_MESSAGE=os.environ.get("REPLY_MESSAGE", False)
     EDIT_TITLE = os.environ.get("EDIT_TITLE", True)
     #others
